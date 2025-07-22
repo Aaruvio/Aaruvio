@@ -1,16 +1,28 @@
-## Hi there 👋
+# AARUVIO
 
-<!--
-**Aaruvio/Aaruvio** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
+🌐 AARUVIO is a one-stop solution for LED Walls, Wood Crafts, Graphic Design, and Electronics.
 
-Here are some ideas to get you started:
+## 📦 Services We Offer
 
-- 🔭 I’m currently working on ...
-- 🌱 I’m currently learning ...
-- 👯 I’m looking to collaborate on ...
-- 🤔 I’m looking for help with ...
-- 💬 Ask me about ...
-- 📫 How to reach me: ...
-- 😄 Pronouns: ...
-- ⚡ Fun fact: ...
--->
+- ✅ LED Display Installation & Maintenance  
+- ✅ Custom Woodcraft Products  
+- ✅ Logo, Banner & Branding Graphics  
+- ✅ Smart Electronics & Modules
+
+## 🔗 Live Website
+
+Coming soon at [www.aaruvio.com](https://www.aaruvio.com)
+
+## 📷 Screenshots
+
+![Homepage](img/screenshot-home.png)
+
+## 📬 Contact
+
+📧 Email: info@aaruvio.com  
+📍 Location: India  
+📱 Phone: +91-9560501029
+
+---
+
+**© 2025 AARUVIO – All rights reserved**
