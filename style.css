@@ -1,0 +1,387 @@
+/* --- Global Styles and Variables --- */
+:root {
+    --primary-color: #A0522D; /* Earthy Brown/Sienna */
+    --secondary-color: #2F4F4F; /* Dark Slate Gray (Header/Footer Background) */
+    --accent-color: #FFD700; /* Gold/Highlight */
+    --light-bg: #f8f8f8;
+    --dark-text: #333333;
+    --link-hover: #8B4513; /* Darker brown for hover */
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: white;
+    color: var(--dark-text);
+    line-height: 1.6;
+}
+
+.container {
+    width: 90%;
+    margin: 0 auto;
+    max-width: 1200px;
+}
+
+/* --- Typography and Headings --- */
+h1, h2, h3 {
+    font-weight: 700;
+    color: var(--secondary-color);
+}
+
+h2 {
+    font-size: 2.5em;
+    margin-bottom: 40px;
+    border-bottom: 3px solid var(--accent-color);
+    display: inline-block;
+    padding-bottom: 10px;
+}
+
+section {
+    padding: 80px 0;
+    text-align: center;
+}
+
+.bg-light {
+    background-color: var(--light-bg);
+}
+
+/* --- Buttons --- */
+.btn-primary {
+    display: inline-block;
+    background-color: var(--primary-color);
+    color: white;
+    padding: 12px 25px;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-top: 20px;
+    transition: background-color 0.3s;
+    font-weight: 600;
+}
+
+.btn-primary:hover {
+    background-color: var(--link-hover);
+}
+
+/* --- Header & Navigation (Logo Combo Styling) --- */
+.header {
+    background-color: var(--secondary-color);
+    padding: 10px 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+.header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* New Container for Logo Icon and Text */
+.logo-combo-link {
+    text-decoration: none;
+    display: flex; 
+    align-items: center; 
+}
+
+/* Styling for the Logo Icon (Image) - UPDATED */
+.header-logo-icon {
+    height: 50px; 
+    width: 50px; /* Width ko bhi fix kar rahe hain */
+    max-width: 100%;
+    margin-right: 10px; 
+    transition: opacity 0.3s;
+    /* Agar SVG ka fill color header background (dark gray) jaisa hai, toh woh chhup jayega.
+       CSS se SVG ko color dena mushkil hai, isliye hum isko display properties de rahe hain.
+    */
+}
+
+.header-logo-icon:hover {
+    opacity: 0.8;
+}
+
+/* Styling for the Logo Text */
+.header-logo-text {
+    font-size: 1.8em;
+    font-weight: bold;
+    color: white; 
+}
+
+
+.nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+}
+
+.nav ul li a {
+    color: white;
+    text-decoration: none;
+    padding: 10px 15px;
+    display: block;
+    transition: background-color 0.3s;
+    border-radius: 5px;
+}
+
+.nav ul li a:hover {
+    background-color: var(--primary-color);
+}
+
+/* --- Hero Section --- */
+.hero {
+    background: var(--light-bg);
+    padding: 120px 0 100px;
+}
+
+.hero h1 {
+    color: var(--primary-color);
+    font-size: 3em;
+}
+
+/* --- Gallery/Product Grid --- */
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    margin-top: 20px;
+}
+
+/* Specific styling for the 4-column video grid on large screens */
+.video-grid-4 {
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+}
+
+.gallery-item {
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+    overflow: hidden;
+    transition: transform 0.3s;
+}
+
+.gallery-item:hover {
+    transform: translateY(-5px);
+}
+
+.gallery-item img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    display: block;
+}
+
+.product-card h3 {
+    margin-top: 15px;
+    font-size: 1.5em;
+}
+
+.product-card p {
+    padding: 0 15px 20px;
+    color: #666;
+    font-size: 0.95em;
+}
+
+.video-item iframe {
+    width: 100%;
+    height: 250px;
+    display: block;
+}
+
+/* --- Contact & Location --- */
+.contact-info address {
+    font-style: normal;
+    font-size: 1.1em;
+    margin-bottom: 20px;
+}
+
+.contact-info a {
+    color: var(--primary-color);
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+.contact-info a:hover {
+    color: var(--link-hover);
+}
+
+.map-container {
+    margin-top: 30px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+/* --- FOOTER STYLES --- */
+.footer {
+    background-color: var(--secondary-color);
+    color: white;
+    padding-top: 40px;
+    font-size: 0.9em;
+}
+
+.footer-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 columns for footer content */
+    gap: 40px;
+    padding-bottom: 30px;
+    text-align: left;
+}
+
+.footer-col h4 {
+    color: var(--accent-color); /* Gold color for sub-headings */
+    margin-bottom: 20px;
+    font-size: 1.1em;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    padding-bottom: 5px;
+}
+
+.footer-col p {
+    margin: 5px 0;
+}
+
+.footer-col ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-col ul li {
+    margin-bottom: 8px;
+}
+
+.footer-col a {
+    color: #cccccc;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.footer-col a:hover {
+    color: var(--accent-color);
+}
+
+.social-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.social-links a {
+    display: inline-block;
+    background-color: var(--primary-color);
+    color: white;
+    padding: 8px 15px;
+    border-radius: 4px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.social-links a:hover {
+    background-color: var(--link-hover);
+    color: white;
+}
+
+.tagline {
+    margin-top: 15px;
+    font-style: italic;
+    color: #aaa;
+}
+
+/* New style for the footer logo image */
+.footer-logo {
+    width: 100px; /* Adjust width as needed for a subtle footer logo */
+    height: auto;
+    margin-top: 20px;
+    display: block;
+}
+
+.copyright-bar {
+    background-color: #1a2228; /* Darker bar for contrast */
+    text-align: center;
+    padding: 15px 0;
+    font-size: 0.8em;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* --- Responsiveness (Media Queries) --- */
+@media (max-width: 992px) {
+    /* Adjust grid for smaller tablets/laptops */
+    .gallery-grid {
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    }
+    .video-grid-4 {
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    }
+}
+
+@media (max-width: 768px) {
+    .container {
+        width: 95%;
+    }
+
+    .hero h1 {
+        font-size: 2.5em;
+    }
+
+    /* Header stacking on mobile */
+    .header .container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .logo-combo-link {
+        margin-bottom: 10px;
+    }
+
+    .header-logo-icon {
+        height: 30px; /* Smaller logo icon on mobile */
+    }
+
+    .header-logo-text {
+        font-size: 1.5em; /* Smaller text on mobile */
+    }
+
+    .nav ul {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    
+    .nav ul li a {
+        padding: 8px 10px;
+        font-size: 0.9em;
+    }
+
+    /* Footer stacking on mobile */
+    .footer-grid {
+        grid-template-columns: 1fr; /* Stack columns vertically on mobile */
+        text-align: center;
+        gap: 30px;
+    }
+
+    .social-links {
+        justify-content: center;
+    }
+
+    .footer-col h4 {
+        border-bottom: none;
+    }
+}
+
+@media (max-width: 480px) {
+    h2 {
+        font-size: 2em;
+        margin-bottom: 25px;
+    }
+    section {
+        padding: 60px 0;
+    }
+    .hero h1 {
+        font-size: 1.8em;
+    }
+}
